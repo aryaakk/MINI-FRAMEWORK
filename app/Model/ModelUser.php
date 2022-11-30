@@ -2,7 +2,7 @@
 
 namespace staditek\OOP\App\Model;
 use staditek\OOP\App\config\Database;
-class model extends Database{
+class ModelUser extends Database{
     public function TampilData(){
         $statement = self::$conn->prepare("SELECT * FROM user");
         $statement->execute();
@@ -25,6 +25,14 @@ class model extends Database{
 
     public function findById($id){
         $statement = self::$conn->prepare("SELECT * FROM user WHERE id ='$id'");
+        $statement->execute();
+        // return self::execute($statement);
+
+        return $statement->fetch(\PDO::FETCH_OBJ);
+    }
+
+    public function findByEmail($email){
+        $statement = self::$conn->prepare("SELECT * FROM user WHERE email ='$email'");
         $statement->execute();
         // return self::execute($statement);
 

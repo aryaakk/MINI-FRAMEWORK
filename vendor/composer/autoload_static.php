@@ -22,10 +22,13 @@ class ComposerStaticInit6ededa2689d153c5b0babefdc74d29b3
 
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'staditek\\OOP\\App\\Controller\\LoginController' => __DIR__ . '/../..' . '/app/Controller/LoginController.php',
         'staditek\\OOP\\App\\Controller\\UserController' => __DIR__ . '/../..' . '/app/Controller/UserController.php',
         'staditek\\OOP\\App\\Core\\Router' => __DIR__ . '/../..' . '/app/Core/Router.php',
         'staditek\\OOP\\App\\Core\\View' => __DIR__ . '/../..' . '/app/Core/View.php',
-        'staditek\\OOP\\App\\Model\\model' => __DIR__ . '/../..' . '/app/Model/model.php',
+        'staditek\\OOP\\App\\Middleware\\Auth' => __DIR__ . '/../..' . '/app/Middleware/Auth.php',
+        'staditek\\OOP\\App\\Middleware\\Guest' => __DIR__ . '/../..' . '/app/Middleware/Guest.php',
+        'staditek\\OOP\\App\\Model\\ModelUser' => __DIR__ . '/../..' . '/app/Model/ModelUser.php',
         'staditek\\OOP\\App\\config\\Database' => __DIR__ . '/../..' . '/app/config/Database.php',
     );
 

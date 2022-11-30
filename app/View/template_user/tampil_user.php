@@ -6,7 +6,7 @@
         <thead>
             <tr height="80" widht="100" class="head">
                 <td class="header" colspan="7">
-                    <a href="<?= \staditek\OOP\App\Core\Router::url("/public/tambah")?>">+ TAMBAHH</a>
+                    <a href="<?= \staditek\OOP\App\Core\Router::url("/tambah")?>">+ TAMBAHH</a>
                 </td>
             </tr>
             <tr>
@@ -37,8 +37,8 @@
                     <td><?= $r->created_at ?></td>
                     <td><?= $update_at ?></td>
                     <td class="action">
-                        <a class="edit" href="<?= \staditek\OOP\App\Core\Router::url("/public/showUpdate/$r->id")?>">Edit</a>
-                        <a onclick="ii" class="hapus" href="<?= \staditek\OOP\App\Core\Router::url("/public/delete/$r->id")?>">Hapus</a>
+                        <a class="edit" href="<?= \staditek\OOP\App\Core\Router::url("/showUpdate/$r->id")?>">Edit</a>
+                        <a onclick="ii" class="hapus" href="<?= \staditek\OOP\App\Core\Router::url("/delete/$r->id")?>">Hapus</a>
                     </td>
                 </tr>
             <?php

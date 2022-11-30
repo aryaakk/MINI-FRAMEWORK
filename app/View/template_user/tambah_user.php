@@ -2,7 +2,7 @@
     <div class="header">
         <h1>TAMBAH DATA USER</h1>
     </div>
-    <form action="<?= \staditek\OOP\App\Core\Router::url("/public/save")?>" method="post">
+    <form action="<?= \staditek\OOP\App\Core\Router::url("/save")?>" method="post">
         <div class="formGrup">
             <label for="">NAMA</label>
             <div class="form-inp">
@@ -30,7 +30,7 @@
         <div class="formGrup">
             <div class="form-sub">
                 <input class="sub" required type="submit" name="" id="" value="Savee">
-                <a href="<?= \staditek\OOP\App\Core\Router::url("/public/tampil")?>">Back</a>
+                <a href="<?= \staditek\OOP\App\Core\Router::url("/tampil")?>">Back</a>
             </div>
         </div>
     </form>

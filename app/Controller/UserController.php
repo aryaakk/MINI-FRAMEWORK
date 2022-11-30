@@ -3,7 +3,8 @@
 namespace staditek\OOP\App\Controller;
 
 use staditek\OOP\App\Core\View;
-use staditek\OOP\App\Model\model;
+use staditek\OOP\App\Core\Router;
+use staditek\OOP\App\Model\ModelUser;
 
 class UserController
 {
@@ -13,7 +14,7 @@ class UserController
 
     public function __construct()
     {
-        self::$model = new model();
+        self::$model = new ModelUser();
     }
     public function tampilData()
     {
@@ -43,13 +44,12 @@ class UserController
         // var_dump($insertUser);
         if (!self::$model->SaveUser($insertUser)) {
             echo "<script>alert('TAMBAH USER GAGAL');
-            window.location.href = '".\staditek\OOP\App\Core\Router::url('/public/tambah')."';
+            window.location.href = '".Router::url('/tambah')."';
             </script>";
         } else {
             echo "<script>alert('TAMBAH USER BERHASIL');
-            window.location.href = '".\staditek\OOP\App\Core\Router::url('/public/tampil')."';
+            window.location.href = '".Router::url('/tampil')."';
             </script>";
-            // header('Location:'.\staditek\OOP\App\Core\Router::url('/public/tampil'));
         }
     }
 
@@ -72,11 +72,11 @@ class UserController
         );
         if (!self::$model->UpdateUser($updateUser)) {
             echo "<script>alert('UPDATE USER GAGAL');
-            window.location.href = '".\staditek\OOP\App\Core\Router::url('/public/edit_user')."';
+            window.location.href = '".Router::url('/edit_user')."';
             </script>";
         } else {
             echo "<script>alert('UPDATE USER BERHASIL');
-            window.location.href = '".\staditek\OOP\App\Core\Router::url('/public/tampil')."';</script>";
+            window.location.href = '".Router::url('/tampil')."';</script>";
         }
     }
 
@@ -84,11 +84,11 @@ class UserController
         // self::$model->deleteUser($id);
         if (!self::$model->deleteUser($id)) {
             echo "<script>alert('DELETE USER GAGAL');
-            window.location.href = '".\staditek\OOP\App\Core\Router::url('/public/tampil')."';
+            window.location.href = '".Router::url('/tampil')."';
             </script>";
         }else {
             echo "<script>alert('DELETE USER BERHASIL');
-            window.location.href = '".\staditek\OOP\App\Core\Router::url('/public/tampil')."';</script>";
+            window.location.href = '".Router::url('/tampil')."';</script>";
         }
     }
 }

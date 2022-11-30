@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="<?= \staditek\OOP\App\Core\Router::url("/asset/css/style.css")?>">
+    <link rel="stylesheet" href="<?= \staditek\OOP\App\Core\Router::url("/asset/css/style-user.css")?>">
     <title>DATA USERR</title>
 </head>
 
@@ -14,10 +14,10 @@
         <nav>
             <div class="wrapper">
                 <div class="header">
-                    <a href="/lat-php-with-masRohmani/MINI_FRAMEWORK/public/tampil">USERMANAGE</a>
+                    <a href="<?= \staditek\OOP\App\Core\Router::url("/tampil")?>">USERMANAGE</a>
                 </div>
                 <div class="title">
-                    <h1>TUGAS TAKE HOME HARI SELASA <b>MAS ROHMANI</b></h1>
+                    <a href="<?= \staditek\OOP\App\Core\Router::url('/logout')?>">LOG OUT</a>
                 </div>
             </div>
         </nav>

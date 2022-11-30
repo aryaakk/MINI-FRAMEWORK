@@ -2,7 +2,7 @@
 namespace staditek\OOP\App\Core;
 class Router {
     private static $routes = array();
-    private static $baseUrl = 'http://localhost:3000/lat-php-with-masRohmani/MINI_FRAMEWORK';
+    private static $baseUrl = 'http://localhost:3000/lat-php-with-masRohmani/MINI_FRAMEWORK/public';
 
     public static function addRoute($method, $path, $controller, $function, $middleware = []) {
         self::$routes[] = array(
@@ -17,10 +17,6 @@ class Router {
     public static function url(string $path){
         $baseUrl = self::$baseUrl ?? 'http://localhost:3000/lat-php-with-masRohmani';
         return $baseUrl.$path;
-    }
-
-    public static function Redirect($path){
-        header("Location : ".self::url($path));
     }
 
     public static function run(){

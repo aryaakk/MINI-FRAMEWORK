@@ -7,9 +7,12 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
+    'staditek\\OOP\\App\\Controller\\LoginController' => $baseDir . '/app/Controller/LoginController.php',
     'staditek\\OOP\\App\\Controller\\UserController' => $baseDir . '/app/Controller/UserController.php',
     'staditek\\OOP\\App\\Core\\Router' => $baseDir . '/app/Core/Router.php',
     'staditek\\OOP\\App\\Core\\View' => $baseDir . '/app/Core/View.php',
-    'staditek\\OOP\\App\\Model\\model' => $baseDir . '/app/Model/model.php',
+    'staditek\\OOP\\App\\Middleware\\Auth' => $baseDir . '/app/Middleware/Auth.php',
+    'staditek\\OOP\\App\\Middleware\\Guest' => $baseDir . '/app/Middleware/Guest.php',
+    'staditek\\OOP\\App\\Model\\ModelUser' => $baseDir . '/app/Model/ModelUser.php',
     'staditek\\OOP\\App\\config\\Database' => $baseDir . '/app/config/Database.php',
 );
