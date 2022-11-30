@@ -5,8 +5,8 @@
     <table>
         <thead>
             <tr height="80" widht="100" class="head">
-                <td class="header">
-                    <a href="/lat-php-with-masRohmani/mini-framework/public/tambah">+ TAMBAHH</a>
+                <td class="header" colspan="7">
+                    <a href="<?= \staditek\OOP\App\Core\Router::url("/public/tambah")?>">+ TAMBAHH</a>
                 </td>
             </tr>
             <tr>
@@ -14,7 +14,6 @@
                 <th>NAMA</th>
                 <th>EMAIL</th>
                 <th>PHONE</th>
-                <th>PASSWORD</th>
                 <th>CREATED AT</th>
                 <th>UPDATED AT</th>
                 <th>ACTION</th>
@@ -35,12 +34,11 @@
                     <td><?= $r->nama ?></td>
                     <td><?= $r->email ?></td>
                     <td><?= $r->phone ?></td>
-                    <td><?= $r->password ?></td>
                     <td><?= $r->created_at ?></td>
                     <td><?= $update_at ?></td>
                     <td class="action">
-                        <a class="edit" href="#">Edit</a>
-                        <a class="hapus" href="#">Hapus</a>
+                        <a class="edit" href="<?= \staditek\OOP\App\Core\Router::url("/public/showUpdate/$r->id")?>">Edit</a>
+                        <a onclick="ii" class="hapus" href="<?= \staditek\OOP\App\Core\Router::url("/public/delete/$r->id")?>">Hapus</a>
                     </td>
                 </tr>
             <?php

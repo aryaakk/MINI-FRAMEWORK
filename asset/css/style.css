@@ -8,6 +8,7 @@ body {
     display: flex;
     flex-direction: column;
     /* height: 100vh; */
+    scroll-behavior: smooth;
     justify-content: space-between;
     background-color: #F2E9E4;
 }
@@ -78,11 +79,13 @@ main table{
 }
 
 table thead tr .header{
+    text-align: left;
 }
 
 table thead tr .header a{
     background-color: #004e98;
     padding: 10px 20px;
+    border-radius: 10px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: bold;
     text-decoration: none;
@@ -105,7 +108,7 @@ table thead tr th{
 table tbody tr td{
     text-align: center;
     padding: 10px;
-    font-size: 20px;
+    font-size: 17px;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
@@ -123,6 +126,73 @@ table tbody tr td.action .hapus{
     text-decoration: none;
     padding: 5px;
     border-radius: 10px;
+}
+
+main form{
+    background-color: #F2E9E4;
+    padding:30px 30px;
+    border: 2px solid #4A4E69;
+    border-radius: 0 0 20px 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    width: 80vw;
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+}
+
+form .formGrup{
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}       
+
+.formGrup label{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+}
+
+.formGrup .form-inp input.inp{
+    width: 100%;
+    height: 40px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 10px 10px 4 0px rgba(0, 0, 0, 0.2);
+    color: #efefef;
+    background-color: #9A8C98;
+    padding: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+
+}
+
+.formGrup .form-sub{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.formGrup .form-sub input.sub{
+    width: 10%;
+    height: 40px;
+    background-color: #31572c;
+    outline: none;
+    color: #efefef;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 5px;
+    border: none;
+}
+
+.formGrup .form-sub a{
+    padding: 9px 25px;
+    text-decoration: none;
+    background-color: #004e98;
+    color: #efefef;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    border-radius: 5px;
+    border: none;
 }
 
 footer{

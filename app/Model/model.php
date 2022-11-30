@@ -11,13 +11,41 @@ class model extends Database{
         return $statement->fetchAll(\PDO::FETCH_OBJ);
     }
 
-    public function SaveData($data){
-        $statement = self::$conn->prepare("INSERT INTO user(nama, email, phone, password) VALUES(
-            :nama, 
+    public function SaveUser($data){
+        $statement = self::$conn->prepare("INSERT INTO user(nama, email, phone, password, created_at, update_at) VALUES(
+            :nama,
             :email,
             :phone,
-            :password
+            :password,
+            :created_at,
+            :update_at
         )");
         return $statement->execute($data);
+    }
+
+    public function findById($id){
+        $statement = self::$conn->prepare("SELECT * FROM user WHERE id ='$id'");
+        $statement->execute();
+        // return self::execute($statement);
+
+        return $statement->fetch(\PDO::FETCH_OBJ);
+    }
+
+    public function UpdateUser($data){
+        $statement = self::$conn->prepare("UPDATE user SET 
+            nama = :nama,
+            email = :email,
+            phone = :phone,
+            password = :password,
+            created_at = :created_at,
+            update_at = :update_at
+            WHERE id = :id
+        ");
+        return $statement->execute($data);
+    }
+
+    public function deleteUser($id){
+        $statement = self::$conn->prepare("DELETE FROM user WHERE id = $id");
+        return $statement->execute();
     }
 }
