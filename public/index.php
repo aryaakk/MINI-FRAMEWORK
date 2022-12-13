@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 use staditek\OOP\App\Controller\UserController;
 use staditek\OOP\App\Controller\LoginController;
 

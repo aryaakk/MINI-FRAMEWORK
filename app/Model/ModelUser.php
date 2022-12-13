@@ -25,7 +25,7 @@ class ModelUser extends Database{
 
     public function findById($id){
         $statement = self::$conn->prepare("SELECT * FROM user WHERE id ='$id'");
-        $statement->execute();
+        $statement->execute();  
         // return self::execute($statement);
 
         return $statement->fetch(\PDO::FETCH_OBJ);

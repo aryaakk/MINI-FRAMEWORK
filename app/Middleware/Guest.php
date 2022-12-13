@@ -8,7 +8,7 @@ class Guest
     function before(): void
     {
         if (@$_SESSION['auth']) {
-            header("location: ".Router::url(''));
+            header("location: ".Router::url('/tampil'));
         }
     }
 }
